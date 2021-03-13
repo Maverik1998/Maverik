@@ -1,0 +1,26 @@
+//home klasa poseban scsss
+.home{
+  height: 100%;
+  padding-top: 40vh; //kao da je procenat od viewport height
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background:
+  linear-gradient(  /*da potamnis sliku mnogo je svetla*/
+  to right,
+  rgba($primary-color, 0.9),
+  rgba($primary-color, 0.3)
+  ),
+  url("https://raw.githubusercontent.com/codeSTACKr/portfolio-sass/master/dist/img/model-1.jpg") center top;
+  background-size: cover;
+  &-name { //mora - jer ti je klasa home-name
+    font-size: 5rem; /*kao 5x 16 rem je u stvari 16px!*/
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid set-text-color($primary-color); /*bela linija ispod!*/
+    &-last{ //mora - zato sto je klasa name-last odnosi se na ovo gore!
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+}

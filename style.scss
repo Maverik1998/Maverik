@@ -1,0 +1,54 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+//body
+body{
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh; //Kao 100% od viewporta
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+h1, h2, h2 {
+  font-weight: 400;
+}
+a{
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+//end body
+
+
+//header
+header{
+  position: fixed; //uvek gore
+  z-index: 2;
+  width: 100%;
+  padding: 1rem; //u zavisnosti od fonta u body sad je 1 rem 1*16px jer je 16px deafault za body, ako je u body 17 onda toliko puta
+}
+//end header
+main{
+  height: 100%;
+  width: 100%;
+  .social-icons{
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    a{
+      padding: 0.4rem;
+      @include transition-ease;
+      &:hover{ //& targetuje link
+        color: $secondary-color;
+      }
+    }
+  }
+}
+footer{
+  font-size: 1rem; //16px
+  position: fixed;
+  bottom: 1.4rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}
